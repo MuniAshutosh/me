@@ -1,0 +1,159 @@
+:root {
+  --icon-bullet: '\2022'; /* • */
+  --world-icon: '\1F30F'; /*🌏*/
+}
+
+body {
+  position: relative;
+  font-family: arial, x-locale-body;
+  letter-spacing: -0.0027777778rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-print-color-adjust: exact;
+  -moz-print-color-adjust: exact;
+  color-adjust: exact;
+  /* background-color: hsla(0, 0%, 0%, 0.8); */
+}
+
+main {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  background-color: white;
+}
+
+section > header > h2 {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  text-align: center;
+  border: 1px solid;
+  padding-inline: 0.21rem;
+}
+
+th {
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+section {
+  padding: 0.7em;
+}
+
+section > header {
+  font: 700 24px monospace;
+  padding: 0.4rem 0;
+}
+
+.projects {
+  padding: 1rem 0 0 0;
+}
+
+.work {
+  padding-block: 1rem;
+}
+.work:not(:last-child) {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.11);
+}
+
+.work > header {
+  display: flex;
+  column-gap: 7px;
+}
+
+.location,
+.period {
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.profile {
+  display: grid;
+  justify-items: center;
+  /* gap: 0.8em; */
+}
+
+.connect {
+  gap: 0.2em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#experience {
+  font-weight: 600;
+}
+
+.linkedin svg {
+  border-radius: 10%;
+}
+
+/* .p-1 {
+  padding: 1em;
+} */
+
+/* Remove bullet points from the list */
+section.skills ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* To allow chips to wrap to the next line */
+}
+
+/* Styling for individual chips */
+section.skills ul li {
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin: 5px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.extra {
+  margin-top: 10px;
+  font-style: italic;
+}
+/* Optional: Additional styling for the tools and test frameworks */
+
+.print-only {
+  display: none;
+}
+
+@media only print {
+  .print-only {
+    display: unset;
+  }
+}
+
+/* @media print {
+  @page {
+    size: 1 letter portrait;
+    orientation: potrait;
+    margin: none;
+    transform: scale(99%);
+  }
+} */
+
+/* CSS Debugger */
+
+/* * {
+  box-sizing: border-box;
+  background: rgba(0, 100, 0, 0.076) !important;
+} */
