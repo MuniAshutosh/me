@@ -100,8 +100,8 @@ const resumeData = {
       position: 'Systems Engineer',
       location: 'Bengaluru, Karnataka, India',
       period: {
-        start: '2019-04-29',
-        end: '2021-11-22',
+        start: '2019-04',
+        end: '2021-11',
       },
       roles: [
         {
