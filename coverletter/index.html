@@ -86,17 +86,16 @@
 
 
         <section class="message">
-            <p>Hi there,</p>
-            <p>I am excited to submit my application for the <span contentEditable="true">Java Developer role at
-                    Bosch</span>
-                . With
-                over 5 years of experience as a full stack software engineer, I have developed a strong foundation in
+            <p>Hi <span id="to">there</span>,</p>
+            <p>I am excited to submit my application for the <span id="role">Java Developer role at
+                    Bosch</span>. With over 5 years of experience as a full stack software engineer, I have developed a
+                strong foundation in
                 building scalable and robust backend systems, collaborating closely with cross-functional teams, and
                 driving impactful solutions to production. I am a fast learner, passionate about cutting-edge
                 technologies, and thrive in environments that push me to grow and adapt quickly.
             </p>
-            <p>At my current role, I have developed highly efficient API applications using <span
-                    contentEditable="true">Java, Go</span>, leveraged gRPC and
+            <p>At my current role, I have developed highly efficient API applications using <span id="tech">Java,
+                    Go</span>, leveraged gRPC and
                 protobuf for real-time data processing, and led the integration of Kubernetes for seamless microservice
                 deployment. My experience with complex backend systems and my ability to work at great velocity have
                 allowed me to deliver features quickly while ensuring the highest standards of quality. I am always
@@ -110,21 +109,39 @@
                 contribute positively to team dynamics would make me a strong fit for your engineering team</p>
             <p>Regards, <br /> Ashutosh Muni</p>
         </section>
+
+        <section>
+            <div class="no-print">
+                <br />To: <input id="inTo" type="text">
+                <br />Role: <input id="inRole" type="text">
+                <br />Tech: <input id="inTech" type="text">
+                <button onclick="change()">Ok</button>
+            </div>
+        </section>
     </main>
 
+
     <script>
-        function calculateExperience() {
-            let startDate = new Date(2019, 3, 29)
-            let todayDate = new Date()
+        function change() {
 
-            let yearPassed = todayDate.getFullYear() - startDate.getFullYear()
-            let monthsPassed = todayDate.getMonth() - startDate.getMonth()
+            inTo = document.getElementById("inTo")
+            to = document.getElementById("to")
+            inRole = document.getElementById("inRole")
+            role = document.getElementById("role")
+            inTech = document.getElementById("inTech")
+            tech = document.getElementById("tech")
 
-            let experience = parseFloat(yearPassed + "." + monthsPassed)
 
-            return experience
+            if (inTo != '') {
+                to.innerHTML = inTo.value
+            }
+            if (inRole.value != '') {
+                role.innerHTML = inRole.value
+            }
+            if (inTech.value != '') {
+                tech.innerHTML = inTech.value
+            }
         }
-
     </script>
 
 </body>
