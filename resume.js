@@ -73,7 +73,7 @@ const resumeData = {
     },
     {
       company: 'Accenture in India',
-      logo: 'https://media.licdn.com/dms/image/D560BAQHbx0URQnbCKg/company-logo_200_200/0/1719978199717/accentureindia_logo?e=1731542400&v=beta&t=OMjdBKa70iUyPbNL9-UXF7ivolRseyzEAVmxsUl_m9U',
+      logo: 'https://media.licdn.com/dms/image/v2/D560BAQHbx0URQnbCKg/company-logo_100_100/company-logo_100_100/0/1719978199717/accentureindia_logo?e=1741824000&v=beta&t=FrGE0mZpHCTnkR07zoSgAVH7Gyi51h9aH-R0AecXpXo',
       position: 'Application Development Senior Analyst',
       location: 'Bengaluru, Karnataka, India',
       period: {
@@ -96,7 +96,7 @@ const resumeData = {
     },
     {
       company: 'Tata Consultancy Services',
-      logo: 'https://media.licdn.com/dms/image/D4D0BAQGsGR9p4ikS5w/company-logo_200_200/0/1708946550425/tata_consultancy_services_logo?e=1731542400&v=beta&t=YsaiT7vMOHYBkyUSy2KQ_O-o0mlDUtwVHpDWcflrSno',
+      logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGsGR9p4ikS5w/company-logo_100_100/company-logo_100_100/0/1708946550425/tata_consultancy_services_logo?e=1741824000&v=beta&t=6dn31hrDCue0-gTByUlU2BEUMdNHPbTwCZzeZmr_fF4',
       position: 'Systems Engineer',
       location: 'Bengaluru, Karnataka, India',
       period: {
