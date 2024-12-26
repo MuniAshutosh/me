@@ -47,7 +47,7 @@ const resumeData = {
   workHistory: [
     {
       company: 'Dell Technologies',
-      logo: 'https://media.licdn.com/dms/image/v2/D560BAQF0hQrvoqdRNw/company-logo_200_200/company-logo_200_200/0/1725894960637/delltechnologies_logo?e=1734566400&v=beta&t=VwhdhvkJJ9D9d-hB8RbOFoLBhcHzQXHUirhowFvYrqE',
+      logo: 'https://media.licdn.com/dms/image/v2/D560BAQF0hQrvoqdRNw/company-logo_100_100/company-logo_100_100/0/1725894960637/delltechnologies_logo?e=1743033600&v=beta&t=VXm_7U4ZWGw6a6eEL8RqLgqH-SCfMGoCp_YVsttGczA',
       position: 'Software Engineer 2',
       location: 'Bengaluru, Karnataka, India',
       period: {
