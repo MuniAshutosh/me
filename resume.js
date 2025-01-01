@@ -129,7 +129,7 @@ const resumeData = {
       course: 'B.Tech in Electrical and Electronics Engineering',
       institution:
         'Institute Of Technical Education and Research, Bhubaneswar, Odisha 751030',
-      university: 'SOA',
+      university: 'SOA Deemed to be University',
       date: '2019',
       marks: '90%',
     },
