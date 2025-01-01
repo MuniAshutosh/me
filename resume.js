@@ -126,22 +126,25 @@ const resumeData = {
   ],
   education: [
     {
-      course: 'Bachelors in Electrical and Electronics Engineering',
+      course: 'B.Tech in Electrical and Electronics Engineering',
       institution:
-        'Institute Of Technical Education and Research, Bhubaneswar, Odisha',
+        'Institute Of Technical Education and Research, Bhubaneswar, Odisha 751030',
+      university: 'SOA',
       date: '2019',
       marks: '90%',
     },
     {
       course: 'Secondary',
-      institution: 'DAV Public School, Basanti Nagar, Rourkela, Odisha',
+      institution: 'DAV Public School, Basanti Nagar, Rourkela, Odisha 769012',
+      university: 'CBSE',
       date: '2015',
       marks: '75%',
     },
     {
       course: 'Matriculation',
       institution:
-        'Chinmaya Vidyalaya (E.M.), Gopabandhu Nagar, Chhend, Rourkela, Odisha',
+        'Chinmaya Vidyalaya (E.M.), Gopabandhu Nagar, Chhend, Rourkela, Odisha 769015',
+      university: 'ICSE',
       date: '2013',
       marks: '85%',
     },
@@ -279,7 +282,7 @@ function renderWorkHistory(workHistory) {
   return workHistory
     .map(
       (work) => `
-  <div class="work">
+  <article class="work">
       <header>
           <img width="48" height="48" src="${work.logo}" alt="${
         work.company
@@ -303,7 +306,7 @@ function renderWorkHistory(workHistory) {
       ${renderRoles(work.roles)}
        
      
-  </div>
+  </article>
   `
     )
     .join('');
@@ -330,10 +333,11 @@ function renderEducation(education) {
     .map(
       (edu) => `
   <tr>
-      <td>${edu.course}</td>
-      <td>${edu.institution}</td>
-      <td><time>${edu.date}</time></td>
-      <td>${edu.marks}</td>
+      <td class="course">${edu.course}</td>
+      <td class="institution">${edu.institution}</td>
+      <td class="university" style="display:none">${edu.university}</td>
+      <td class="dates"><time datetime="${edu.date}">${edu.date}</time></td>
+      <td class="mark">${edu.marks}</td>
   </tr>
   `
     )
