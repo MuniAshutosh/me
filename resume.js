@@ -261,10 +261,7 @@ function generateResumeHTML(data) {
   } - 1, ${data.professionalSummary.startDate.day});
         let todayDate = new Date();
 
-        let yearPassed = todayDate.getFullYear() - startDate.getFullYear();
-        let monthsPassed = todayDate.getMonth() - startDate.getMonth();
-
-        let experience = parseFloat(yearPassed + "." + monthsPassed);
+        let experience = Math.round(((todayDate - startDate ) / (24*60*60*1000*365))*10)/10
 
         let experienceSpan = document.getElementById("experience");
         experienceSpan.innerHTML = experience;
@@ -341,4 +338,15 @@ function renderEducation(education) {
   `
     )
     .join('');
+}
+
+function printConfig() {
+  var config = [
+    {
+      browser: 'edge',
+      paperSize: 'A4',
+      scale: 100,
+      marginTop: '0.1"',
+    },
+  ];
 }
