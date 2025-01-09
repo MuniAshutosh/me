@@ -3,7 +3,9 @@ const resumeData = {
     name: 'Ashutosh Muni',
     resumeTitle: 'Ashutosh Muni - Resume - 2024',
     email: 'ashutoshmuni1997@gmail.com',
-    phone: '+918338982865',
+    phoneCountryCode: '+91',
+    phoneNumber: '8338982865',
+    phoneType: 'Mobile',
     linkedin: 'https://www.linkedin.com/in/ashutoshmuni',
     website: 'https://muniashutosh.github.io/resume',
   },
@@ -44,7 +46,7 @@ const resumeData = {
     'JUnit',
     'Selenium',
   ],
-  workHistory: [
+  workExperience: [
     {
       company: 'Dell Technologies',
       logo: 'https://media.licdn.com/dms/image/v2/D560BAQF0hQrvoqdRNw/company-logo_100_100/company-logo_100_100/0/1725894960637/delltechnologies_logo?e=1743033600&v=beta&t=VXm_7U4ZWGw6a6eEL8RqLgqH-SCfMGoCp_YVsttGczA',
@@ -189,9 +191,11 @@ function generateResumeHTML(data) {
                 </span>
                 <span class="phone-num print-only">
                     📱
-                    <a href="tel:${data.profile.phone}">${
-    data.profile.phone
-  }</a>
+                    <a data-phone-device-type="${
+                      data.profile.phoneType
+                    }" href="tel:${
+    data.profile.phoneCountryCode + data.profile.phoneNumber
+  }">${data.profile.phoneNumber}</a>
                 </span>
                 <span class="linkedin">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -230,11 +234,11 @@ function generateResumeHTML(data) {
             </ul>
         </section>
 
-        <section class="work-history">
+        <section class="work-experience">
             <header>
-                <h2>Work History</h2>
+                <h2>Work Experience</h2>
             </header>
-            ${renderWorkHistory(data.workHistory)}
+            ${renderWorkExperience(data.workExperience)}
         </section>
 
         <section class="education">
@@ -278,8 +282,8 @@ function generateResumeHTML(data) {
 const resumeHTML = generateResumeHTML(resumeData);
 document.write(resumeHTML); // Renders the HTML on the page
 
-function renderWorkHistory(workHistory) {
-  return workHistory
+function renderWorkExperience(workExperience) {
+  return workExperience
     .map(
       (work) => `
   <article class="work">
@@ -317,12 +321,12 @@ function renderRoles(roles) {
     .map(
       (role) => `
   
-    <div class="projects">
+    <section class="projects">
      <h3>${role.title}</h3>
      <ul>
          ${role.tasks.map((task) => `<li>${task}</li>`).join('')}
      </ul>
-    </div>
+    </section>
   `
     )
     .join('');
